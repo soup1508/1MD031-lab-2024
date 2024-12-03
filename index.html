@@ -1,78 +1,93 @@
 <!DOCTYPE HTML>
 <html lang="en">
    <head>
-       <title>Page title shown in window title</title>
+       <title>Welcome to BurgerHeaven Online</title>
        <meta charset="utf-8"/>
+       <link rel="stylesheet" type="text/css" href="public/css/style.css">
    </head>
    <body>
         <header>
-            <h1>Welcome to BurgerHeaven Online</h1>
+            <div class="header">
+                <img src="/img/header.jpg" id="header-image" alt="header picture of restaurant" title="header">
+                <h1 id="header-text">Welcome to BurgerHeaven Online</h1> 
+            </div>
         </header>
-        <section>
+
+        <section id="burger-selection">
             <h3>Select burger</h3>
-            <div>
+
+            <p>
                 This is where you execute burger selection
-            </div>
-        <section style="display: flex; gap: 20px; align-items: flex-start;">
-            <div>
-                <h4>
-                    Classic Burger
-                </h4>
-                <img src="/img/classic-burger.jpg" alt="classic burger" tite="classic burger" style="width: 200px">
-                <ul>
-                    <li>Sustainably sourced beef patty</li>
-                    <li>Cheddar cheese (conatins lactose)</li>
-                    <li>Brioche bread (contains gluten)</li>
-                </ul>
-            </div>
-            <div>
-                <h4>
-                    Fried Chicken Burger
-                </h4>
-                <img src="/img/chicken-burger.jpg" alt="chicken burger" tite="chicken burger" style="width: 200px">
-                <ul>
-                    <li>Fried chicken patty (contains gluten)</li>
-                    <li>Brioche bread (contains gluten)</li>
-                </ul>
-            </div>
-            <div>
-                <h4>
-                    Vegan Burger
-                </h4>
-                <img src="/img/vegan-burger.jpg" alt="vegan burger" tite="vegan burger" style="width: 200px">
-                <ul>
-                    <li>Vegan patty (contains soy)</li>
-                    <li>Brioche bread (contains gluten)</li>
-                </ul>
+            </p>
+
+            <div class="burger-items wrapper"> 
+
+                <div class="box classic-burger">
+                        <h4>Classic Burger</h4>
+                    <p>
+                        <img src="/img/classic-burger.jpg" alt="classic burger" title="classic burger" style="width: 200px">
+                        <ul>
+                            <li>Sustainably sourced beef patty</li>
+                            <li>Cheddar cheese (contains <span class="allergen">lactose</span>)</li>
+                            <li>Brioche bread (contains <span class="allergen">gluten</span>)</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="box chicken-burger">
+                        <h4>Chicken Burger</h4>
+                    <p>
+                        <img src="/img/chicken-burger.jpg" alt="chicken burger" title="chicken burger" style="width: 200px">
+                        <ul>
+                            <li>Fried chicken patty (contains <span class="allergen">gluten</span>)</li>
+                            <li>Brioche bread (contains <span class="allergen">gluten</span>)</li>
+                        </ul>
+                    </p>    
+                </div>
+
+                <div class="box vegan-burger">
+                        <h4>Vegan Burger</h4>
+                    <p>
+                        <img src="/img/vegan-burger.jpg" alt="vegan burger" title="vegan burger" style="width: 200px">
+                        <ul>
+                            <li>Vegan patty (contains <span class="allergen">soy</span>)</li>
+                            <li>Brioche bread (contains <span class="allergen">gluten</span>)</li>
+                        </ul>
+                    </p>
+                </div>
             </div>
         </section>
-        <section>
+
+        <section id="order-info">
             <h3>Customer information</h3>
-            <div>
-                This is where you provide necessary information
-            </div>
-        </section>
-        <section>
-            <h3>
-                Delivery information:
-            </h3>
+
+            <p>
+                Provide necessary order information below
+            </p>
+
+            <h3>Delivery information:</h3>
+
             <form>
                 <p>
                     <label for="name">Full Name</label><br>
                     <input type="text" id="name" name="n" required="required" placeholder="First- and Last name">
                 </p>
+
                 <p>
                     <label for="email">E-mail</label><br>
                     <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
                 </p>
+
                 <p>
                     <label for="street">Street</label><br>
                     <input type="text" id="street" name="st" required="required" placeholder="Street name">
                 </p>
+
                 <p>
                     <label for="house">House</label><br>
                     <input type="number" id="house" name="hs" required="required" placeholder="House number">
                 </p>
+
                 <p>
                     <label for="payment">Payment method</label><br>
                     <select id="payment" name="pmt">
@@ -83,31 +98,34 @@
                         <option>Google Pay</option>
                     </select>
                 </p>
+
                 <p>
-                    <p>
-                        <label for="gender">Gender</label><br>
-                        
-                        <input type="radio" id="male" name="gender" value="Male">
-                        <label for="male">Male</label><br>
-                        
-                        <input type="radio" id="female" name="gender" value="Female">
-                        <label for="female">Female</label><br>
-                        
-                        <input type="radio" id="non-binary" name="gender" value="Non-binary">
-                        <label for="non-binary">Non-binary</label><br>
-                        
-                        <input type="radio" id="undisclosed" name="gender" value="Undisclosed" checked="checked">
-                        <label for="undisclosed">Undisclosed</label>
-                    </p>
+                    <label for="gender">Gender</label><br>
                     
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label><br>
+                    
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label><br>
+                    
+                    <input type="radio" id="non-binary" name="gender" value="Non-binary">
+                    <label for="non-binary">Non-binary</label><br>
+                    
+                    <input type="radio" id="undisclosed" name="gender" value="Undisclosed" checked="checked">
+                    <label for="undisclosed">Undisclosed</label>
                 </p>
             </form>
-            <button type="submit">
+        </section>
+
+        <section class="order-button">
+            <button  type="submit">
                 <img src="/img/order-button.png" style="width: 30px" >
                 Place my order
             </button>
         </section>
+
         <hr>
+
         <footer>
             &COPY;2024 Hypothetical Burgers Inc.
         </footer>
